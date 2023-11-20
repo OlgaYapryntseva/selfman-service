@@ -13,15 +13,15 @@ import lombok.Setter;
 @AllArgsConstructor
 public class Factory {
 	@Id
-	String companyId;
+	String factoryId;
 	@Setter
-	Company company;
+	InfoFactory infoFactory;
 	@Setter
 	Address address;
 	@Setter
 	Contact contact;
 	@Setter
-	InfoCompany info;
+	Tags tags;
 	@Setter
 	Rating rating;
 	Set<String> roles;
@@ -32,12 +32,13 @@ public class Factory {
 		roles = new HashSet<>();
 	}
 	
-	public Factory(String companyId, Company company, Address address, Contact contact, InfoCompany info) {
+	public Factory(String factoryId,InfoFactory infoFactory, Address address, Contact contact, Tags tags) {
 		this();
-		this.company = company;
+		this.factoryId = factoryId;
+		this.infoFactory = infoFactory;
 		this.address = address;
 		this.contact = contact;
-		this.info = info;
+		this.tags = tags;
 
 	}
 

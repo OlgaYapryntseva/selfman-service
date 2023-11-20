@@ -9,5 +9,5 @@ public interface FactoryService {
     
     Iterable<FactoryDto> findByFactoryCity(String city);
 
-	FactoryDto deleteCompany(String companyId);
+	FactoryDto deleteCompany(String factoryId);
 }

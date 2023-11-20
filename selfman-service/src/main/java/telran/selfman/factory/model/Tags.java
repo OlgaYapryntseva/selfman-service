@@ -8,7 +8,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @NoArgsConstructor
-public class InfoCompany {
+public class Tags {
 	Set<String> industry;
 	Set<String> product;
 	Set<String> keyWords;

@@ -6,7 +6,6 @@ import lombok.NoArgsConstructor;
 @Getter
 @NoArgsConstructor
 public class RatingDto {
-	Integer numberOfRatings;
-	Integer totalScore;
-	Double avergeScore;
+	Integer rating;
+	Integer reviews;
 }

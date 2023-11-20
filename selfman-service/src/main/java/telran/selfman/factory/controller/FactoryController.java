@@ -21,7 +21,6 @@ public class FactoryController {
 
 	    @PostMapping("/factory")
 		public Boolean creatFactory(@RequestBody FactoryDto factoryDto) {
-	    	System.out.println(factoryDto.getCompany());
 	    	return factoryService.creatFactory(factoryDto);
 		}
 

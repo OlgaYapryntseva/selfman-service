@@ -8,9 +8,9 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 //@EqualsAndHashCode(of = "nameCompany")
-public class Company {
+public class InfoFactory {
 	String logo;
-	String nameCompany;
+	String nameFactory;
 	Integer founded;
 	String info;
 }

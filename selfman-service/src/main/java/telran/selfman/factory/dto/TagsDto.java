@@ -6,9 +6,8 @@ import lombok.NoArgsConstructor;
 
 
 @Getter
-
 @NoArgsConstructor
-public class InfoCompanyDto {
+public class TagsDto {
 	Set<String> industry;
 	Set<String> product;
 	Set<String> keyWords;

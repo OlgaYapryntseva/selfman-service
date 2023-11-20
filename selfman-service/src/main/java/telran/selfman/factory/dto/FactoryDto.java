@@ -12,15 +12,15 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class FactoryDto {
 	@Id
-	String companyId;
+	String factoryId;
 	
-	CompanyDto company;
+	InfoFactoryDto infoFactory;
 	
 	AddressDto address;
 	
 	ContactDto contact;
 	
-	InfoCompanyDto info;
+	TagsDto tags;
 	
 	RatingDto rating;
 	

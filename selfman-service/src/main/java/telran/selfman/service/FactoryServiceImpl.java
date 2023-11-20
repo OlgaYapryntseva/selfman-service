@@ -15,14 +15,14 @@ import telran.selfman.factory.model.Factory;
 @RequiredArgsConstructor
 public class FactoryServiceImpl implements FactoryService{
     
-	//@Autowired
+	
 	final ModelMapper modelMapper;
 	final FactoryRepository factoryRepository;
 	
 	
 	@Override
 	public Boolean creatFactory(FactoryDto factoryDto) {
-		if (factoryRepository.existsById(factoryDto.getCompanyId())) {
+		if (factoryRepository.existsById(factoryDto.getFactoryId())) {
 			return false;
 		}
 		Factory factory = modelMapper.map(factoryDto, Factory.class);
@@ -35,7 +35,6 @@ public class FactoryServiceImpl implements FactoryService{
 		return factoryRepository.findCompanyByAddressCountry(country).stream()
 				.map(v -> modelMapper.map(v, FactoryDto.class))
 				.collect(Collectors.toList());
-//		return null;
 	}
 
 	@Override
@@ -43,7 +42,6 @@ public class FactoryServiceImpl implements FactoryService{
 		return factoryRepository.findCompanyByAddressCity(city).stream()
 				.map(v -> modelMapper.map(v, FactoryDto.class))
 				.collect(Collectors.toList());
-//		return null;
 	}
 
 	@Override

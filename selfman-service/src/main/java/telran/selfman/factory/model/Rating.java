@@ -8,19 +8,6 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 public class Rating {
-	Integer numberOfRatings;
-	Integer totalScore;
-	Double avergeScore;
-
-	public void addnumberOfRatings() {
-		numberOfRatings++;
-	}
-
-	public void addScore(Integer score) {
-		totalScore += score;
-	}
-
-	public void getAvergeScore() {
-		avergeScore = (double) totalScore / numberOfRatings;
-	}
+	Integer rating;
+	Integer reviews;
 }
