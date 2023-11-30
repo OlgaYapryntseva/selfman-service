@@ -1,4 +1,4 @@
-package telran.selfman.accounting.dto;
+package telran.selfman.customer.dto;
 
 import java.util.Set;
 
@@ -12,8 +12,8 @@ import lombok.Singular;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class RolesDto {
-	String login;
+public class RolesCustomerDto {
+	String email;
 	@Singular
 	Set<String> roles;
 

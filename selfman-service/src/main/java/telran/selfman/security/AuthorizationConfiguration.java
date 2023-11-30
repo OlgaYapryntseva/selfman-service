@@ -21,14 +21,14 @@ public class AuthorizationConfiguration {
         http.csrf(csrf -> csrf.disable());
         http.sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS));
 		http.authorizeHttpRequests(authorize -> authorize.
-				requestMatchers("/account/register", "/factory/**")
+				requestMatchers("/customer/register")
 					.permitAll()
-				.requestMatchers("/account/user/{login}/role/{role}")
+				.requestMatchers("/customer/user/{email}/role/{role}")
 					.hasRole("ADMINISTRATOR")
-				.requestMatchers(HttpMethod.PUT, "/account/user/{login}")
-					.access(new WebExpressionAuthorizationManager("#login == authentication.name"))
-				.requestMatchers(HttpMethod.DELETE, "/account/user/{login}")
-					.access(new WebExpressionAuthorizationManager("#login == authentication.name or hasRole('ADMINISTRATOR')"))
+				.requestMatchers(HttpMethod.PUT, "/customer/login/{email}")
+					.access(new WebExpressionAuthorizationManager("#email == authentication.name"))
+				.requestMatchers(HttpMethod.DELETE, "/customer/user/{email}")
+					.access(new WebExpressionAuthorizationManager("#email == authentication.name or hasRole('ADMINISTRATOR')"))
 				.anyRequest()
 					.authenticated()
 		);
