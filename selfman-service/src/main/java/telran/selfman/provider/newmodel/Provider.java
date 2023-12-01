@@ -12,7 +12,6 @@ import org.springframework.data.annotation.Id;
 @Getter
 @AllArgsConstructor
 public class Provider {
-	
 	@Id
 	String providerId;
 	
