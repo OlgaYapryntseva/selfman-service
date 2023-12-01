@@ -16,5 +16,15 @@ public class RolesCustomerDto {
 	String email;
 	@Singular
 	Set<String> roles;
+	
+	
+	
+	public void addRole(String role) {
+		roles.add(role);
+	}
+	
+	public void removeRole(String role) {
+		roles.remove(role);
+	}
 
 }
