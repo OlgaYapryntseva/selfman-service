@@ -1,4 +1,4 @@
-package telran.selfman.factory.dto;
+package telran.selfman.provider.dto;
 
 import java.util.Set;
 import lombok.Getter;

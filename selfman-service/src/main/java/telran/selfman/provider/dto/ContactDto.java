@@ -1,4 +1,4 @@
-package telran.selfman.factory.dto;
+package telran.selfman.provider.dto;
 
 import java.util.List;
 import lombok.Getter;
@@ -11,4 +11,7 @@ public class ContactDto {
     String webSite;
     List<String> telefon;
     List<String> email;
+    String facebook;
+    String twitter;
+    String linkedin;
 }

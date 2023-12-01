@@ -1,5 +1,7 @@
-package telran.selfman.factory.dto;
+package telran.selfman.provider.dto;
 
+
+import java.util.Set;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -8,9 +10,11 @@ import lombok.NoArgsConstructor;
 @Getter
 @NoArgsConstructor
 //@EqualsAndHashCode(of = "nameCompany")
-public class InfoFactoryDto {
+public class InfoProviderDto {
 	String logo;
-	String nameFactory;
+	String nameProvider;
+	Set<String> typeProvider;
 	Integer founded;
+	Set<String> language;
 	String info;
 }

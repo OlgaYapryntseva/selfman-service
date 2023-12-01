@@ -1,4 +1,4 @@
-package telran.selfman.factory.dto;
+package telran.selfman.provider.dto;
 
 import java.time.LocalDate;
 import java.util.Set;
@@ -6,15 +6,22 @@ import org.springframework.data.annotation.Id;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor
-public class FactoryDto {
+public class ProviderDto {
 	@Id
-	String factoryId;
+	String providerId;
 	
-	InfoFactoryDto infoFactory;
+	@Setter
+	String login;
+	
+	@Setter
+	String password;
+	
+	InfoProviderDto infoProvider;
 	
 	AddressDto address;
 	

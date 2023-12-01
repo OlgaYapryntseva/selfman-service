@@ -1,4 +1,4 @@
-package telran.selfman.factory.model;
+package telran.selfman.provider.model;
 
 import java.time.LocalDate;
 import java.util.HashSet;
@@ -11,11 +11,19 @@ import lombok.Setter;
 
 @Getter
 @AllArgsConstructor
-public class Factory {
+public class Provider {
+	
 	@Id
-	String factoryId;
+	String providerId;
+	
 	@Setter
-	InfoFactory infoFactory;
+	String login;
+	
+	@Setter
+	String password;
+	
+	@Setter
+	InfoProvider infoProvider;
 	@Setter
 	Address address;
 	@Setter
@@ -28,14 +36,17 @@ public class Factory {
 	@Setter
 	LocalDate postingDate = LocalDate.now();
 	
-	public Factory() {
-		roles = new HashSet<>();
+	public Provider() {
+		roles = new HashSet<String>();
+		roles.add("Provider");
 	}
 	
-	public Factory(String factoryId,InfoFactory infoFactory, Address address, Contact contact, Tags tags) {
+	
+	public Provider(String login, String password,InfoProvider infoProvider, Address address, Contact contact, Tags tags) {
 		this();
-		this.factoryId = factoryId;
-		this.infoFactory = infoFactory;
+		this.login = login;
+		this.password = password;
+		this.infoProvider = infoProvider;
 		this.address = address;
 		this.contact = contact;
 		this.tags = tags;

@@ -1,4 +1,4 @@
-package telran.selfman.factory.dto;
+package telran.selfman.provider.dto;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;

@@ -6,16 +6,16 @@ import org.modelmapper.convention.MatchingStrategies;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-
 @Configuration
-public class ServiceConfiguration {
-	@Bean
-    ModelMapper getModelMapper() {
-    	ModelMapper modelMapper = new ModelMapper();
-    	modelMapper.getConfiguration()
-    				.setFieldMatchingEnabled(true)
-    				.setFieldAccessLevel(AccessLevel.PRIVATE)
-    				.setMatchingStrategy(MatchingStrategies.STRICT);
+public class ProviderConfiguration {
+
+    @Bean
+    public ModelMapper getModelMapper() {
+		ModelMapper modelMapper = new ModelMapper();
+		modelMapper.getConfiguration()
+		             .setFieldMatchingEnabled(false)
+		             .setFieldAccessLevel(AccessLevel.PRIVATE)
+		             .setMatchingStrategy(MatchingStrategies.STRICT);
 		return modelMapper;
 	}
 }

@@ -1,4 +1,4 @@
-package telran.selfman.factory.model;
+package telran.selfman.provider.model;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
